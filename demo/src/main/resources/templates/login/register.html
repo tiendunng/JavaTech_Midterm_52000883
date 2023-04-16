@@ -1,0 +1,268 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en"  xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">&ndash;&gt;-->
+<!--&lt;!&ndash;    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">&ndash;&gt;-->
+<!--&lt;!&ndash;    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>&ndash;&gt;-->
+<!--    &lt;!&ndash;    <link rel="stylesheet" type="text/css"  th:href="@{/css/login.css}" />&ndash;&gt;-->
+
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+
+<!--</head>-->
+<!--<body>&lt;!&ndash; Section: Design Block &ndash;&gt;-->
+<!--<section class="background-radial-gradient overflow-hidden">-->
+<!--    <style>-->
+<!--        .background-radial-gradient {-->
+<!--            background-color: hsl(21, 41%, 15%);-->
+<!--            background-image: radial-gradient(650px circle at 0% 0%,-->
+<!--            hsl(218, 41%, 35%) 15%,-->
+<!--            hsl(218, 41%, 30%) 35%,-->
+<!--            hsl(218, 41%, 20%) 75%,-->
+<!--            hsl(218, 41%, 19%) 80%,-->
+<!--            transparent 100%),-->
+<!--            radial-gradient(1250px circle at 100% 100%,-->
+<!--                    hsl(218, 41%, 45%) 15%,-->
+<!--                    hsl(218, 41%, 30%) 35%,-->
+<!--                    hsl(218, 41%, 20%) 75%,-->
+<!--                    hsl(218, 41%, 19%) 80%,-->
+<!--                    transparent 100%);-->
+<!--        }-->
+
+<!--        #radius-shape-1 {-->
+<!--            height: 220px;-->
+<!--            width: 220px;-->
+<!--            top: -60px;-->
+<!--            left: -130px;-->
+<!--            background: radial-gradient(#44006b, #ad1fff);-->
+<!--            overflow: hidden;-->
+<!--        }-->
+
+<!--        #radius-shape-2 {-->
+<!--            border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;-->
+<!--            bottom: -60px;-->
+<!--            right: -110px;-->
+<!--            width: 300px;-->
+<!--            height: 300px;-->
+<!--            background: radial-gradient(#44006b, #ad1fff);-->
+<!--            overflow: hidden;-->
+<!--        }-->
+
+<!--        .bg-glass {-->
+<!--            background-color: hsla(0, 0%, 100%, 0.9) !important;-->
+<!--            backdrop-filter: saturate(200%) blur(25px);-->
+<!--        }-->
+<!--    </style>-->
+
+<!--    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">-->
+<!--        <h1>Hello</h1>-->
+<!--        <div class="row gx-lg-5 align-items-center mb-5">-->
+<!--            <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">-->
+<!--                <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">-->
+<!--                    The best offer <br />-->
+<!--                    <span style="color: hsl(218, 81%, 75%)">for your business</span>-->
+<!--                </h1>-->
+<!--                <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">-->
+<!--                    Cửa hàng luôn đem lại trải nghiệm tốt nhất cho khách hàng.-->
+<!--                </p>-->
+<!--            </div>-->
+
+<!--            <div class="col-lg-6 mb-5 mb-lg-0 position-relative">-->
+<!--                <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>-->
+<!--                <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>-->
+
+<!--                <div class="card bg-glass">-->
+<!--                    <div class="card-body px-4 py-5 px-md-5">-->
+<!--                        <form>-->
+<!--                            &lt;!&ndash; 2 column grid layout with text inputs for the first and last names &ndash;&gt;-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-md-6 mb-4">-->
+<!--                                    <div class="form-outline">-->
+<!--                                        <input type="text" id="form3Example1" class="form-control" />-->
+<!--                                        <label class="form-label" for="form3Example1">First name</label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-md-6 mb-4">-->
+<!--                                    <div class="form-outline">-->
+<!--                                        <input type="text" id="form3Example2" class="form-control" />-->
+<!--                                        <label class="form-label" for="form3Example2">Last name</label>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Email input &ndash;&gt;-->
+<!--                            <div class="form-outline mb-4">-->
+<!--                                <input type="email" id="form3Example3" class="form-control" />-->
+<!--                                <label class="form-label" for="form3Example3">Email address</label>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Password input &ndash;&gt;-->
+<!--                            <div class="form-outline mb-4">-->
+<!--                                <input type="password" id="form3Example4" class="form-control" />-->
+<!--                                <label class="form-label" for="form3Example4">Password</label>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Checkbox &ndash;&gt;-->
+<!--                            <div class="form-check d-flex justify-content-center mb-4">-->
+<!--                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33"  />-->
+<!--                                <label class="form-check-label" for="form2Example33">-->
+<!--                                    Subscribe to our newsletter-->
+<!--                                </label>-->
+<!--                            </div>-->
+
+<!--                            &lt;!&ndash; Submit button &ndash;&gt;-->
+<!--                                <button type="submit" class="btn btn-primary ">-->
+<!--                                    Sign up-->
+<!--                                </button>-->
+<!--                            &lt;!&ndash; Register buttons &ndash;&gt;-->
+<!--                            <div class="text-center">-->
+<!--                                <p>or sign up with:</p>-->
+<!--                                <button type="button" class="btn btn-link btn-floating mx-1">-->
+<!--                                    <i class="fa fa-facebook-f"></i>-->
+<!--                                </button>-->
+
+<!--                                <button type="button" class="btn btn-link btn-floating mx-1">-->
+<!--                                    <i class="fa fa-google"></i>-->
+<!--                                </button>-->
+
+<!--                                <button type="button" class="btn btn-link btn-floating mx-1">-->
+<!--                                    <i class="fa fa-twitter"></i>-->
+<!--                                </button>-->
+
+<!--                                <button type="button" class="btn btn-link btn-floating mx-1">-->
+<!--                                    <i class="fa fa-github"></i>-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; Section: Design Block &ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!--*****************************************************************************************************-->
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration and Login System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" th:href="@{/index}">Registration and Login System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/templates/login}">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br /><br /><br />
+<div class="container">
+    <div class="row col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">Registration</h2>
+            </div>
+            <div th:if="${param.success}">
+                <div class="alert alert-info">
+                    You have successfully registered our app!
+                </div>
+            </div>
+            <div class="card-body">
+                <form
+                        method="post"
+                        role="form"
+                        th:action="@{/register/save}"
+                        th:object="${user}"
+                >
+                    <div class="form-group mb-3">
+                        <label class="form-label">First Name</label>
+                        <input
+                                class="form-control"
+                                id="firstName"
+                                name="firstName"
+                                placeholder="Enter first name"
+                                th:field="*{firstName}"
+                                type="text"
+                        />
+                        <p th:errors = "*{firstName}" class="text-danger"
+                           th:if="${#fields.hasErrors('firstName')}"></p>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label class="form-label">Last Name</label>
+                        <input
+                                class="form-control"
+                                id="lastName"
+                                name="lastName"
+                                placeholder="Enter last name"
+                                th:field="*{lastName}"
+                                type="text"
+                        />
+                        <p th:errors = "*{lastName}" class="text-danger"
+                           th:if="${#fields.hasErrors('lastName')}"></p>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label class="form-label">Email</label>
+                        <input
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                placeholder="Enter email address"
+                                th:field="*{email}"
+                                type="email"
+                        />
+                        <p th:errors = "*{email}" class="text-danger"
+                           th:if="${#fields.hasErrors('email')}"></p>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label class="form-label">Password</label>
+                        <input
+                                class="form-control"
+                                id="password"
+                                name="password"
+                                placeholder="Enter password"
+                                th:field="*{password}"
+                                type="password"
+                        />
+                        <p th:errors = "*{password}" class="text-danger"
+                           th:if="${#fields.hasErrors('password')}"></p>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit">Register</button>
+                        <span>Already registered? <a th:href="@{/templates/login}">Login here</a></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
